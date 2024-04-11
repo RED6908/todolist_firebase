@@ -1,0 +1,67 @@
+{
+  "project_info": {
+    "project_number": "432974365154",
+    "project_id": "proyecto-e15e4",
+    "storage_bucket": "proyecto-e15e4.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:432974365154:android:664ec25f0a54c04f3b79bb",
+        "android_client_info": {
+          "package_name": "com.example.todolist_firebase"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCy7Wh_v-QmwGkAYHj5gU9OinbQniwDQsU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:432974365154:android:d4b5b32be7b4b2453b79bb",
+        "android_client_info": {
+          "package_name": "com.example.untitled1"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCy7Wh_v-QmwGkAYHj5gU9OinbQniwDQsU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:432974365154:android:d3797053b11256613b79bb",
+        "android_client_info": {
+          "package_name": "com.utrm.prueva"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCy7Wh_v-QmwGkAYHj5gU9OinbQniwDQsU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
