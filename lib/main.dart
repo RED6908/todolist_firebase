@@ -1,6 +1,7 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
+import 'package:todolist_firebase/view/form_task.dart';
 import 'firebase_options.dart';
 
 void main() async {
@@ -37,7 +38,6 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -46,23 +46,25 @@ class _MyHomePageState extends State<MyHomePage> {
         title: Text(widget.title),
       ),
       body: StreamBuilder(
-          stream: FirebaseFirestore.instance.collection("todoclass").snapshots(),
+          stream:
+              FirebaseFirestore.instance.collection("todoclass").snapshots(),
           builder: (context, snapshot) {
             if (!snapshot.hasData) return const Text('Cargando datos...');
             return ListView.builder(
                 itemCount: snapshot.data?.docs.length,
-                itemBuilder: (context, index)=> ListTile(
-                  leading: const Icon(Icons.task_alt),
-                  title: Text(
-                      'Numero de tareas ${snapshot.data!.docs[index]['number']}'),
-                  subtitle: Text(snapshot.data!.docs[index]['name']),
-
-                ));
-
+                itemBuilder: (context, index) => ListTile(
+                      leading: const Icon(Icons.task_alt),
+                      title: Text(
+                          'Numero de tareas ${snapshot.data!.docs[index]['number']}'),
+                      subtitle: Text(snapshot.data!.docs[index]['name']),
+                    ));
           }),
       floatingActionButton: FloatingActionButton(
         onPressed: () {
-          print('hola');
+          Navigator.push(
+            context,
+            MaterialPageRoute(builder: (context) => const AddNewTaskScreen()),
+          );
         },
         tooltip: 'Increment',
         child: const Icon(Icons.add),
